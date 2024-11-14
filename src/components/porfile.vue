@@ -12,9 +12,6 @@
 <script>
 export default {
     name: 'Porfile',
-    props: {
-        msg: String
-    }
 }
 </script>
 <style lang="">
