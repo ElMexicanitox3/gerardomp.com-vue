@@ -21,20 +21,49 @@
             h-full 
         ">
             <!-- Primera columna con texto y botones -->
-            <div class="basis-1/2 flex flex-col justify-between p-4">
+            <div 
+                class="basis-1/2 flex flex-col p-4" 
+                :class="{
+                    'justify-between': cardData.isOnAppStore || cardData.isOnPlayStore,
+                    'justify-center': !(cardData.isOnAppStore || cardData.isOnPlayStore)
+                }"
+            >
+
                 <div>
-                    <div class="inline-block text-sm bg-gray-700 px-2 py-1 rounded-full border border-gray-600">Prayers</div>
-                    <h2 class="text-4xl font-semibold mt-4">Beyt</h2>
+                    <div v-if="cardData.category" class="inline-block text-sm bg-gray-700 px-2 py-1 rounded-full border border-gray-600">{{ cardData.category }}</div>
+                    <h2 class="text-4xl font-semibold mt-4">{{ cardData.title }}</h2>
                 </div>
-                <div class="flex flex-col">
-                    <img src="../assets/app-store.svg" alt="App Store" class="w-32 mb-2">
-                    <img src="../assets/google-play.svg" alt="Google Play" class="w-32">
+
+
+                <!-- esta bien la condficional? -->
+                <div class="flex flex-col" v-if="cardData.isOnAppStore || cardData.isOnPlayStore">
+                    <!-- agregar https://play.google.com/store/apps/details?id=app.simao com href -->
+                    <!-- Enlace de App Store -->
+                    <a 
+                        v-if="cardData.isOnAppStore && cardData.urlAppStore" 
+                        :href="cardData.urlAppStore" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="mb-2"
+                    >
+                        <img src="../assets/app-store.svg" alt="App Store" class="w-32">
+                    </a>
+                    <!-- Enlace de Play Store -->
+                    <a 
+                        v-if="cardData.isOnPlayStore && cardData.urlPlayStore" 
+                        :href="cardData.urlPlayStore" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
+                        <img src="../assets/google-play.svg" alt="Google Play" class="w-32">
+                    </a>
                 </div>
+
             </div>
 
             <!-- Imagen del screen (segunda columna) -->
             <div class="basis-1/2 relative">
-                <img src="../assets/1.png" alt="Screen" class="md:absolute md:right-[10px] md:top-[10px]">
+                <img :src="cardData.image" alt="Screen" class="md:absolute md:right-[10px] md:top-[10px]">
             </div>
         </div>
     </div>
@@ -45,6 +74,21 @@
 
 <script>
 export default {
-    name: 'Card'
+    name: 'Card',
+    props: {
+        cardData: {
+            type: Object,
+            required: true,
+            default: () => ({
+                title: '',
+                image: '',
+                category: null,
+                isOnPlayStore: false,
+                isOnAppStore: false,
+                urlPlayStore: null,
+                urlAppStore: null,
+            })
+        }
+    }
 }
 </script>

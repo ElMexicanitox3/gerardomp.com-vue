@@ -1,6 +1,6 @@
 <script setup lang="js">
-import Card from './components/card.vue';
 import Porfile from './components/porfile.vue';
+import Projects from './components/projects.vue';
 import Summary from './components/summary.vue';
 </script>
 
@@ -14,12 +14,8 @@ import Summary from './components/summary.vue';
     <!-- summary -->
     <Summary />
     
-
-    <div class="grid lg:grid-cols-2 md:grid-cols-1 gap-2">
-      <Card/>
-      <Card/>
-    </div>
-    
+    <!-- Projects -->
+    <Projects />
     
   </div>
 </template>
