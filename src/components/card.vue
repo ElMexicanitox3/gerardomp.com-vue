@@ -1,7 +1,25 @@
 <template>
-    <div class="relative bg-gray-800 text-white rounded-lg w-[600px] h-[340px] p-4 overflow-hidden">
+    <div class="
+        relative 
+        bg-gray-800 
+        text-white 
+        rounded-lg 
+        p-2 
+        overflow-hidden
+        w-[388px]
+        h-[462px]
+        md:w-[700px]
+        md:h-[500px]
+        lg:w-[400px]
+        lg:h-[340px]
+        xl:w-[600px] 
+        xl:h-[340px]
+    ">
         <!-- Contenido dividido en dos columnas -->
-        <div class="flex h-full">
+        <div class="
+            flex 
+            h-full 
+        ">
             <!-- Primera columna con texto y botones -->
             <div class="basis-1/2 flex flex-col justify-between p-4">
                 <div>
@@ -16,7 +34,7 @@
 
             <!-- Imagen del screen (segunda columna) -->
             <div class="basis-1/2 relative">
-                <img src="../assets/1.png" alt="Screen" class="absolute right-[10px] top-[10px]">
+                <img src="../assets/1.png" alt="Screen" class="md:absolute md:right-[10px] md:top-[10px]">
             </div>
         </div>
     </div>
