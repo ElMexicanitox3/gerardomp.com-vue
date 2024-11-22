@@ -1,7 +1,8 @@
 <template>
     <div class="text-center mb-8">
+        <!-- ANTES FUNCIONABA -->
         <img
-            src="../assets/porfile.jpg"
+            src="/assets/porfile.jpg"
             alt="Foto de perfil"
             class="rounded-full mx-auto mb-4 lg:w-52 md:w-44 w-40"
         />

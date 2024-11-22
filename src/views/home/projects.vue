@@ -22,25 +22,25 @@ export default {
             projects: [
                 {
                     title: "WEC",
-                    image: "../src/assets/wec_movil/1.png",
+                    image: "/assets/wecmovil.png",
                     backgroundColor: 'bg-neutral-950', // Clase predeterminada para el fondo
                     textColor: 'text-white',
                 },
                 {
                     title: "NoteHub",
-                    image: "../src/assets/notehub/1.png",
+                    image: "/assets/notehub.png",
                     backgroundColor: 'bg-amber-400', // Clase predeterminada para el fondo
                     textColor: 'text-black',
                 },
                 {
                     title: "AstroMap",
-                    image: "../src/assets/astromap/1.png",
+                    image: "/assets/astromap.png",
                     backgroundColor: 'bg-neutral-950', // Clase predeterminada para el fondo
                     textColor: 'text-white',
                 },
                 {
                     title: "SIMAO",
-                    image: "../src/assets/simao/1.png",
+                    image: "/assets/simao.png",
                     isOnPlayStore: true,
                     urlPlayStore: "https://play.google.com/store/apps/details?id=app.simao",
                     backgroundColor: 'bg-blue-500', // Clase predeterminada para el fondo
