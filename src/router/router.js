@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 // Importa tus componentes
 import Home from '../views/home/home.vue';
+import Privacy from '../views/notehub/privacy.vue';
 // import About from '@/views/About.vue';
 // import NotFound from '@/views/NotFound.vue';
 
@@ -11,6 +12,11 @@ const routes = [
     name: 'Home',
     component: Home, // Componente para la página principal
   },
+  {
+    path: '/notehub/privacy',
+    name: 'privacy',
+    component: Privacy, // Componente para la página principal
+  }
 //   {
 //     path: '/about',
 //     name: 'About',
