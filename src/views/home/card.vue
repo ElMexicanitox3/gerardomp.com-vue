@@ -14,13 +14,16 @@
                 }"
             >
                 <div>
-                    <div v-if="cardData.category" class="inline-block text-sm bg-gray-700 px-2 py-1 rounded-full border border-gray-600">
+                    <div 
+                        v-if="cardData.category" 
+                        class="inline-block text-sm bg-gray-700 px-2 py-1 rounded-full border border-gray-600"
+                    >
                         {{ cardData.category }}
                     </div>
                     <h2 class="text-4xl font-semibold mt-4">{{ cardData.title }}</h2>
                 </div>
 
-                <div class="flex flex-col" v-if="cardData.isOnAppStore || cardData.isOnPlayStore">
+                <div class="flex flex-col space-y-2 mt-4" v-if="cardData.isOnAppStore || cardData.isOnPlayStore">
                     <a 
                         v-if="cardData.isOnAppStore && cardData.urlAppStore" 
                         :href="cardData.urlAppStore" 
@@ -28,7 +31,7 @@
                         rel="noopener noreferrer"
                         class="mb-2"
                     >
-                        <img src="../assets/app-store.svg" alt="App Store" class="w-32">
+                        <img src="/assets/app-store.svg" alt="App Store" class="w-32">
                     </a>
                     <a 
                         v-if="cardData.isOnPlayStore && cardData.urlPlayStore" 
@@ -36,8 +39,21 @@
                         target="_blank" 
                         rel="noopener noreferrer"
                     >
-                        <img src="../assets/google-play.svg" alt="Google Play" class="w-32">
+                        <img src="/assets/google-play.svg" alt="Google Play" class="w-32">
                     </a>
+                </div>
+
+                <!-- Badge (Pequeño y Dinámico) -->
+                <div v-if="cardData.badges && cardData.badges.length" class="flex space-x-2 mt-2">
+                    <span 
+                        v-for="badge in cardData.badges" 
+                        :key="badge" 
+                        class="inline-flex items-center text-xs font-medium px-2.5 py-0.5 rounded border"
+                        :class="`${badge.color} ${badge.textColor}`"
+                    >
+                    <i :class=" badge.icon "></i>
+                        {{ badge.name }}
+                    </span>
                 </div>
             </div>
 
@@ -66,6 +82,9 @@ export default {
                 urlAppStore: null,
                 backgroundColor: 'bg-gray-800', // Clase predeterminada para el fondo
                 textColor: 'text-white', // Clase predeterminada para el texto
+                badges: [
+                    
+                ], // Lista de badges dinámicos
             })
         }
     }
