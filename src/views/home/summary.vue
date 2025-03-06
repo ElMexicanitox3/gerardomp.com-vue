@@ -3,7 +3,7 @@
         <h2 class="text-xl font-semibold mb-2">Resumen</h2>
 
         <p class="text-gray-700 mb-2">
-            Desarrollador Fullstack con más de 3 años de experiencia, especializado en el desarrollo de aplicaciones web y móviles. Experto en lenguajes de programación y frameworks como CodeIgniter, Laravel, Dart y Flutter, enfocado en la creación de soluciones eficientes y de alta calidad. Con experiencia en el uso de tecnologías en la nube como Firebase, Google Cloud Platform y Oracle Cloud para mejorar la escalabilidad y rendimiento de las aplicaciones.
+            Desarrollador Fullstack con más de 4 años de experiencia, especializado en el desarrollo de aplicaciones web y móviles. Experto en lenguajes de programación y frameworks como CodeIgniter, Laravel, Dart y Flutter, enfocado en la creación de soluciones eficientes y de alta calidad. Con experiencia en el uso de tecnologías en la nube como Firebase, Google Cloud Platform y Oracle Cloud para mejorar la escalabilidad y rendimiento de las aplicaciones.
         </p>
 
         <div class="flex flex-col items-center p-4 rounded-lg mb-2 mt-2">
