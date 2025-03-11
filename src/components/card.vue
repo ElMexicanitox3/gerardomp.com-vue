@@ -48,7 +48,7 @@
                     <span 
                         v-for="badge in cardData.badges" 
                         :key="badge" 
-                        class="inline-flex items-center text-xs font-medium px-2.5 py-0.5 rounded border"
+                        class="inline-flex items-center text-xs font-medium px-2.5 py-0.5 rounded-sm border"
                         :class="`${badge.color} ${badge.textColor}`"
                     >
                     <i :class=" badge.icon "></i>
