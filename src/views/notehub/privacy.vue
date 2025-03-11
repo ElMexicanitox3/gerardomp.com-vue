@@ -73,7 +73,8 @@
 </template>
 <script>
 export default {
-    name: 'Privacy',
+    
+    name: 'NotehubPrivacy',
 }
 </script>
 <style lang="">
