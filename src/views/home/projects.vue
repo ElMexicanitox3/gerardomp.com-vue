@@ -10,7 +10,7 @@
     </div>
 </template>
 <script>
-import Card from './card.vue';
+import Card from '../../components/card.vue';
 
 export default {
     name: 'Projects',
