@@ -4,6 +4,21 @@ import PhoneIcon from '@/icons/phoneIcon.vue';
 import PinIcon from '@/icons/pinIcon.vue';
 import GithubIcon from '@/icons/githubIcon.vue';
 import LinkedinIcon from '@/icons/linkedinIcon.vue';
+
+import NavbarComponent from '@/components/NavbarComponent.vue';
+import ProjectsView from '@/views/projectsView.vue';
+import SummaryView from '@/views/summaryView.vue';
+import { useLangStore } from '@/stores/lang.store';
+
+const langStore = useLangStore();
+import { useI18n } from 'vue-i18n';
+const { locale } = useI18n();
+
+const changeLanguage = () => {
+  const newLang = langStore.getCurrentLang === 'es' ? 'en' : 'es';
+  langStore.setLanguage(newLang);
+  locale.value = newLang;
+};
 </script>
 
 <template>
@@ -20,7 +35,7 @@ import LinkedinIcon from '@/icons/linkedinIcon.vue';
                 <div class="avatar rounded-2xl p-1 sm:p-2 shadow-md">
                   <div class="w-24 sm:w-40 rounded-xl overflow-hidden">
                     <img
-                      src="https://scontent.fmex18-1.fna.fbcdn.net/v/t39.30808-6/312432910_5862690763755114_2636458681651548094_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=sGRPKn6Fk1AQ7kNvwFRV1CG&_nc_oc=Admw-dFZJis7GDi3XVH4VcKXFySONVPTA5VeCLUjemNgryXvfBjCkdNCo53HO8CV3Q1Ss_201NmurdzS4Fvj_106&_nc_zt=23&_nc_ht=scontent.fmex18-1.fna&_nc_gid=aRHnOnKriQrBr9NzwD_zWw&oh=00_AfFCgBn5PhceAx3CLyWogosRI7DJ7rD0ebv9njGSgc6dpw&oe=680B2E05"
+                      src="@/assets/porfile.jpg"
                       class="hover:scale-105 transition-transform duration-300"
                       alt="Profile photo"
                     />
@@ -34,9 +49,9 @@ import LinkedinIcon from '@/icons/linkedinIcon.vue';
                     </h2>
                   </div>
                   <div class="pt-1 sm:pt-2">
-                    <span class="badge badge-outline text-xs sm:text-sm"
-                      >Desarrollador Fullstack</span
-                    >
+                    <span class="badge badge-outline text-xs sm:text-sm">{{
+                      $t('porfileCard.role')
+                    }}</span>
                   </div>
                 </div>
               </div>
@@ -51,7 +66,7 @@ import LinkedinIcon from '@/icons/linkedinIcon.vue';
                   </div>
                   <div class="list-col-grow">
                     <a href="mailto:gerardo.matadama@gmail.com">
-                      <div>Correo Electronico</div>
+                      <div>{{ $t('porfileCard.email') }}</div>
                       <div class="text-xs font-semibold opacity-60">gerardo.matadama@gmail.com</div>
                     </a>
                   </div>
@@ -62,7 +77,7 @@ import LinkedinIcon from '@/icons/linkedinIcon.vue';
                   </div>
                   <div class="list-col-grow">
                     <a href="tel:+527443828011">
-                      <div>Telefono</div>
+                      <div>{{ $t('porfileCard.phone') }}</div>
                       <div class="text-xs font-semibold opacity-60">7443828011</div>
                     </a>
                   </div>
@@ -72,7 +87,7 @@ import LinkedinIcon from '@/icons/linkedinIcon.vue';
                     <PinIcon class="size-10" />
                   </div>
                   <div class="list-col-grow">
-                    <div>Direccion</div>
+                    <div>{{ $t('porfileCard.address') }}</div>
                     <div class="text-xs font-semibold opacity-60">Chihuahua, Mexico</div>
                   </div>
                 </li>
@@ -105,43 +120,42 @@ import LinkedinIcon from '@/icons/linkedinIcon.vue';
                   </div>
                 </li>
               </ul>
+              <div class="divider w-2/3 mx-auto my-2 sm:my-4 pt-7">
+                <!-- Lang buttons -->
+                <div class="flex justify-center gap-2">
+                  <button
+                    class="btn btn-sm btn-outline btn-primary"
+                    :class="{ 'btn-active': langStore.getCurrentLang.toLocaleUpperCase() === 'ES' }"
+                    @click="changeLanguage()"
+                    value="es"
+                  >
+                    ES
+                  </button>
+                  <button
+                    class="btn btn-sm btn-outline btn-primary"
+                    :class="{ 'btn-active': langStore.getCurrentLang.toLocaleUpperCase() === 'EN' }"
+                    @click="changeLanguage()"
+                    value="en"
+                  >
+                    EN
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Segunda tarjeta - Full width en móvil, 3/4 en desktop -->
         <div class="w-full lg:w-3/4 h-full order-last lg:order-none">
-          <div class="card bg-base-100 shadow-sm h-full flex flex-col">
+          <div class="card bg-base-200 shadow-sm h-full flex flex-col">
             <!-- Navbar sticky con ajuste responsivo -->
-            <div class="navbar bg-base-100 shadow-sm flex-shrink-0 sticky top-0 lg:top-0 z-10">
-              <div class="flex-1">
-                <a class="btn btn-ghost text-lg sm:text-xl">Resumen</a>
-              </div>
-              <div class="flex-none">
-                <ul class="menu menu-horizontal px-1">
-                  <li><a class="text-sm sm:text-base">Link</a></li>
-                  <li>
-                    <details>
-                      <summary class="text-sm sm:text-base">Menú</summary>
-                      <ul class="bg-base-100 rounded-t-none p-2">
-                        <li><a>Link 1</a></li>
-                        <li><a>Link 2</a></li>
-                      </ul>
-                    </details>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <NavbarComponent />
 
-            <!-- Contenido scrollable con ajustes responsivos -->
-            <div class="flex-1 overflow-y-auto p-3 sm:p-4">
-              <div
-                v-for="i in 50"
-                :key="i"
-                class="mb-3 sm:mb-4 p-2 sm:p-3 border-b text-sm sm:text-base"
-              >
-                Elemento {{ i }} - Contenido de ejemplo para demostrar el scroll
-              </div>
+            <!-- Router View -->
+            <div class="flex-1 overflow-hidden">
+              <!-- <router-view /> -->
+              <SummaryView id="summary" />
+              <ProjectsView id="projects" />
             </div>
           </div>
         </div>

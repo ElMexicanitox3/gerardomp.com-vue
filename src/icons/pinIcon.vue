@@ -4,7 +4,7 @@
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    fill="#DAC590"
+    fill="var(--color-primary)"
   >
     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -16,7 +16,7 @@
         <g
           id="Dribbble-Light-Preview"
           transform="translate(-223.000000, -5439.000000)"
-          fill="#DAC590"
+          fill="var(--color-primary)"
         >
           <g id="icons" transform="translate(56.000000, 160.000000)">
             <path

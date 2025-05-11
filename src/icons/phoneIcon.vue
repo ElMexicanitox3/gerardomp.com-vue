@@ -5,7 +5,7 @@
     <g id="SVGRepo_iconCarrier">
       <path
         d="M9 2C9 1.44772 9.44772 1 10 1H14C14.5523 1 15 1.44772 15 2V3C15 3.55228 14.5523 4 14 4H10C9.44772 4 9 3.55228 9 3V2Z"
-        fill="#DAC590"
+        fill="var(--color-primary)"
       ></path>
       <rect
         x="5.75"
@@ -13,10 +13,10 @@
         width="12.5"
         height="20.5"
         rx="1.75"
-        stroke="#DAC590"
+        stroke="var(--color-primary)"
         stroke-width="1.5"
       ></rect>
-      <path d="M9 19.5H15" stroke="#DAC590" stroke-width="1.5" stroke-linecap="round"></path>
+      <path d="M9 19.5H15" stroke="var(--color-primary)" stroke-width="1.5" stroke-linecap="round"></path>
     </g>
   </svg>
 </template>
