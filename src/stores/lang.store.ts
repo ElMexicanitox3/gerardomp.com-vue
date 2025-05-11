@@ -1,44 +1,40 @@
 import { useLocalStorage } from '@vueuse/core';
 import { defineStore } from 'pinia';
-import { ref, computed } from 'vue';
+import { computed, ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 
-type LanguageCode = 'en' | 'es';
+export type LanguageCode = 'en' | 'es';
 
-interface LanguageState {
-  lang: LanguageCode;
+interface Language {
+  label: string;
+  code: LanguageCode;
 }
 
-// Valor por defecto que cumple con la interfaz
-const DEFAULT_LANG: LanguageState = {
-  lang: 'es', // Valor inicial por defecto
-};
+const SUPPORTED_LANGUAGES: Language[] = [
+  { label: 'Español', code: 'es' },
+  { label: 'English', code: 'en' },
+];
+
+const DEFAULT_LANG: LanguageCode = 'es';
 
 export const useLangStore = defineStore('lang', () => {
-  // Inicializamos con el valor del localStorage o el valor por defecto
-  const storedLang = useLocalStorage<LanguageState>('lang', DEFAULT_LANG);
+  const { locale } = useI18n();
+  const storedLang = useLocalStorage<LanguageCode>('lang', DEFAULT_LANG);
 
-  // Creamos una referencia reactiva que siempre cumple con LanguageState
-  const currentLang = ref<LanguageState>({
-    lang: storedLang.value?.lang ?? DEFAULT_LANG.lang,
-  });
+  locale.value = storedLang.value;
 
-  // Actualizamos el localStorage cuando cambia currentLang
+  const getLanguages = ref(SUPPORTED_LANGUAGES);
+
   const setLanguage = (langCode: LanguageCode) => {
-    currentLang.value.lang = langCode;
-    storedLang.value = currentLang.value;
+    locale.value = langCode;
+    storedLang.value = langCode;
   };
 
-  // Getter computado para obtener el lenguaje actual
-  const getCurrentLang = computed(() => currentLang.value.lang);
+  const getCurrentLang = computed(() => storedLang.value);
 
   return {
-    // State
-    currentLang,
-
-    // Getters
+    getLanguages,
     getCurrentLang,
-
-    // Actions
     setLanguage,
   };
 });

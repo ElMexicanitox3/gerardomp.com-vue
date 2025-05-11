@@ -8,19 +8,10 @@ import LinkedinIcon from '@/icons/linkedinIcon.vue';
 import NavbarComponent from '@/components/NavbarComponent.vue';
 import ProjectsView from '@/views/projectsView.vue';
 import SummaryView from '@/views/summaryView.vue';
-import { useLangStore } from '@/stores/lang.store';
 
-const langStore = useLangStore();
-import { useI18n } from 'vue-i18n';
 import { onBeforeUnmount, onMounted, ref } from 'vue';
 import { MenuItem, type MenuOptions } from '@/interfaces/navbarItems.interfaces';
-const { locale } = useI18n();
-
-const changeLanguage = () => {
-  const newLang = langStore.getCurrentLang === 'es' ? 'en' : 'es';
-  langStore.setLanguage(newLang);
-  locale.value = newLang;
-};
+import LangComponent from '@/components/LangComponent.vue';
 
 const sections: MenuOptions[] = [
   {
@@ -177,27 +168,8 @@ onBeforeUnmount(() => {
                   </div>
                 </li>
               </ul>
-              <div class="divider w-2/3 mx-auto my-2 sm:my-4 pt-7">
-                <!-- Lang buttons -->
-                <div class="flex justify-center gap-2">
-                  <button
-                    class="btn btn-sm btn-outline btn-primary"
-                    :class="{ 'btn-active': langStore.getCurrentLang.toLocaleUpperCase() === 'ES' }"
-                    @click="changeLanguage()"
-                    value="es"
-                  >
-                    ES
-                  </button>
-                  <button
-                    class="btn btn-sm btn-outline btn-primary"
-                    :class="{ 'btn-active': langStore.getCurrentLang.toLocaleUpperCase() === 'EN' }"
-                    @click="changeLanguage()"
-                    value="en"
-                  >
-                    EN
-                  </button>
-                </div>
-              </div>
+
+              <LangComponent />
             </div>
           </div>
         </div>
