@@ -12,6 +12,8 @@ import { useLangStore } from '@/stores/lang.store';
 
 const langStore = useLangStore();
 import { useI18n } from 'vue-i18n';
+import { onBeforeUnmount, onMounted, ref } from 'vue';
+import { MenuItem, type MenuOptions } from '@/interfaces/navbarItems.interfaces';
 const { locale } = useI18n();
 
 const changeLanguage = () => {
@@ -19,6 +21,61 @@ const changeLanguage = () => {
   langStore.setLanguage(newLang);
   locale.value = newLang;
 };
+
+const sections: MenuOptions[] = [
+  {
+    id: 'summary',
+    title: MenuItem.summery,
+  },
+  {
+    id: 'projects',
+    title: MenuItem.projects,
+  },
+];
+
+const currentTitle = ref('summary');
+const navbarHeight = 64; // Ajusta según la altura real de tu navbar
+
+const handleScroll = () => {
+  const scrollPosition = window.scrollY + navbarHeight;
+
+  for (let i = sections.length - 1; i >= 0; i--) {
+    const section = document.getElementById(sections[i].id);
+    if (section) {
+      const sectionTop = section.offsetTop;
+      const sectionBottom = sectionTop + section.offsetHeight;
+
+      if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+        currentTitle.value = sections[i].title;
+        break;
+      }
+    }
+  }
+};
+
+const handleSectionClick = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    const rect = element.getBoundingClientRect();
+    const customOffset = 15;
+    const scrollPosition = window.scrollY + navbarHeight;
+    const offset = rect.top + scrollPosition - navbarHeight - customOffset;
+    window.scrollTo({
+      top: offset,
+      behavior: 'smooth',
+    });
+    // element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Para el estado inicial
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <template>
@@ -149,8 +206,11 @@ const changeLanguage = () => {
         <div class="w-full lg:w-3/4 h-full order-last lg:order-none">
           <div class="card bg-base-200 shadow-sm h-full flex flex-col">
             <!-- Navbar sticky con ajuste responsivo -->
-            <NavbarComponent />
-
+            <NavbarComponent
+              :current-title="currentTitle"
+              @section-click="handleSectionClick"
+              :menu-items="sections"
+            />
             <!-- Router View -->
             <div class="flex-1 overflow-hidden">
               <!-- <router-view /> -->

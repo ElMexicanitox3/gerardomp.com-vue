@@ -8,13 +8,14 @@
     </div>
     <div class="flex-none">
       <ul class="menu menu-horizontal px-1">
-        <li v-for="item in menuItems" :key="item">
+        <!-- propery menuItem does not exist -->
+        <li v-for="item in menuItems" :key="item.id">
           <a
             class="text-sm sm:text-base"
-            :class="{ 'text-primary font-semibold': currentTitle === item }"
-            @click="(setCurrentTitle(item), customScrollTo(`#${item}`))"
+            :class="{ 'text-primary font-semibold': currentTitle === item.title }"
+            @click="$emit('section-click', item.title)"
           >
-            {{ $t(`itemsNavbar.${item}`) }}
+            {{ $t(`itemsNavbar.${item.title}`) }}
           </a>
         </li>
       </ul>
@@ -23,64 +24,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
+import type { MenuOptions } from '@/interfaces/navbarItems.interfaces';
 
-// Definimos las opciones del menú como array
-const menuItems = ['summary', 'projects'] as const;
-type MenuItem = (typeof menuItems)[number];
+defineProps<{
+  currentTitle: string;
+  menuItems: MenuOptions[];
+}>();
 
-interface NavbarComponentProps {
-  initialTitle?: MenuItem;
-}
+defineEmits<{
+  (e: 'section-click', sectionId: string): void;
+}>();
 
-const props = withDefaults(defineProps<NavbarComponentProps>(), {
-  initialTitle: 'summary',
-});
-
-const currentTitle = ref<MenuItem>(props.initialTitle);
-
-const setCurrentTitle = (title: MenuItem) => {
-  currentTitle.value = title;
-};
-
-function customScrollTo(tag: string) {
-  const element = document.querySelector(tag);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-}
-
-// Scroll Spy Implementation
-const sectionObserver = ref<IntersectionObserver | null>(null);
-
-onMounted(() => {
-  sectionObserver.value = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-          const sectionId = entry.target.id as MenuItem;
-          if (menuItems.includes(sectionId)) {
-            currentTitle.value = sectionId;
-          }
-        }
-      });
-    },
-    {
-      threshold: [0.1, 0.5, 0.9],
-      rootMargin: '0px 0px -50% 0px',
-    },
-  );
-
-  // Observar todas las secciones del menú
-  menuItems.forEach((sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      sectionObserver.value?.observe(section);
-    }
-  });
-});
-
-onUnmounted(() => {
-  sectionObserver.value?.disconnect();
-});
+// Añade esta definición
+// const menuItems = ['summary', 'projects'] as const;
 </script>
