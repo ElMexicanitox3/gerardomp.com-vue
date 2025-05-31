@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import EmailIcon from '@/icons/emailIcon.vue';
-import PhoneIcon from '@/icons/phoneIcon.vue';
-import PinIcon from '@/icons/pinIcon.vue';
-import GithubIcon from '@/icons/githubIcon.vue';
-import LinkedinIcon from '@/icons/linkedinIcon.vue';
+import EmailIcon from '@/icons/EmailIcon.vue';
+import PhoneIcon from '@/icons/PhoneIcon.vue';
+import PinIcon from '@/icons/PinIcon.vue';
+import GithubIcon from '@/icons/GithubIcon.vue';
+import LinkedinIcon from '@/icons/LinkedinIcon.vue';
 
 import NavbarComponent from '@/components/NavbarComponent.vue';
 import ProjectsView from '@/views/projectsView.vue';
@@ -16,7 +16,7 @@ import LangComponent from '@/components/LangComponent.vue';
 const sections: MenuOptions[] = [
   {
     id: 'summary',
-    title: MenuItem.summery,
+    title: MenuItem.summary,
   },
   {
     id: 'projects',

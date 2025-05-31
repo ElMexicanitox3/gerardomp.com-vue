@@ -1,57 +1,149 @@
 <template>
-  <div class="w-full lg:w-full h-full mx-auto px-4 py-6">
+  <div class="w-full mx-auto px-4 py-6">
     <div class="card bg-base-100 shadow-lg h-full">
-      <div class="card-body p-6 md:p-8 space-y-4">
-        <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 text-primary">Resumen</h2>
+      <div class="card-body p-6 md:p-8 relative">
+        <div class="flex flex-col items-center">
+          <div class="bg-primary/10 p-3 rounded-full mb-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-primary"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+              />
+            </svg>
+          </div>
+          <h2 class="text-2xl md:text-3xl font-bold text-center text-primary">
+            <span class="bg-clip-text from-primary to-accent">{{
+              $t('sections.summary.title')
+            }}</span>
+          </h2>
+        </div>
 
-        <div class="space-y-6 text-base md:text-lg leading-relaxed">
-          <p class="bg-base-200/30 p-4 rounded-lg hover:bg-base-200/50 transition-colors">
-            Quis proident ea ea consequat aute. Mollit do tempor eiusmod ex veniam consequat ea est
-            consectetur aliquip mollit occaecat aute sint. Duis minim irure eiusmod labore pariatur
-            quis do occaecat sunt. Cillum sunt voluptate dolore Lorem in anim velit proident
-            adipisicing. Est cupidatat sunt est aliqua ad. Velit voluptate aliqua id nostrud labore
-            excepteur mollit veniam. Esse aliquip veniam amet ex nostrud incididunt consectetur
-            culpa consequat aute fugiat Lorem. Et ex Lorem qui non elit commodo Lorem ea sit fugiat
-            amet laborum. Exercitation cillum magna amet ut magna duis irure in officia quis elit
-            sit duis. Ut cupidatat aute minim dolore. Et exercitation labore fugiat anim cupidatat
-            proident magna exercitation aliquip. Ipsum ex eiusmod sint excepteur magna ea dolor. Ut
-            anim ipsum et exercitation nisi cillum Lorem pariatur ea. Ipsum ad sit nulla culpa culpa
-            et commodo reprehenderit. Proident sunt dolore sunt veniam occaecat eu qui voluptate
-            amet in mollit elit. Dolor aliqua fugiat esse aliqua eu enim non ex mollit. Minim in
-            officia sint esse sit commodo dolore. Labore tempor consequat eiusmod pariatur ea
-            excepteur excepteur dolore cillum voluptate. Officia dolor eiusmod amet in irure ipsum
-            sint in laboris nulla ullamco ut enim magna. Laborum nulla aliquip ex do. Ea amet
-            exercitation sunt pariatur. Non ex ut tempor qui magna eiusmod id fugiat mollit esse
-            consectetur deserunt nostrud nulla. Magna proident enim excepteur occaecat laboris
-            officia amet esse quis dolore sit. Occaecat pariatur ad occaecat duis quis nostrud
-            cillum irure et. Nulla eiusmod qui qui exercitation elit est occaecat ut proident
-            aliqua. Labore excepteur enim est proident do. Cupidatat reprehenderit occaecat sit
-            ullamco laboris pariatur id. Eiusmod aliquip laboris ipsum mollit officia veniam mollit
-            consequat ad est. Irure pariatur enim incididunt aute. Ad quis tempor aliquip elit ea
-            est tempor voluptate id laboris id. Sit minim Lorem officia sint magna dolor. Deserunt
-            officia sint id non cupidatat fugiat excepteur tempor duis laborum ut eiusmod labore
-            occaecat. Aute irure anim officia nostrud qui laborum exercitation nisi cillum pariatur
-            ad ad. Ullamco dolor commodo quis eiusmod ex irure magna. Laborum ea duis proident ut
-            consequat aliqua tempor consectetur pariatur voluptate qui aliquip. Lorem tempor
-            excepteur et sunt. Ipsum voluptate fugiat veniam commodo irure deserunt sunt magna
-            cillum ex aliquip aute. Irure ullamco ullamco laborum excepteur dolore qui amet duis
-            dolor qui aliquip ex. Reprehenderit aute pariatur tempor aliquip ullamco adipisicing
-            pariatur deserunt magna minim est anim officia. Eiusmod proident irure eu sit magna
-            culpa eiusmod aute amet occaecat. Elit aute deserunt est consectetur ullamco tempor
-            cillum pariatur qui nostrud. Aliqua consequat nisi et aliquip voluptate cillum cillum
-            eiusmod sunt. Labore nisi consequat Lorem anim quis aute.
-          </p>
+        <!-- Contenido mejorado -->
+        <div class="space-y-2 text-base md:text-lg leading-relaxed">
+          <div class="p-6 rounded-xl">
+            <p class="text-justify">
+              <span class="font-bold text-primary">{{ $t('porfileCard.role') }}</span>
+              {{ $t('sections.summary.p1') }}
+            </p>
+
+            <p class="mt-4 text-justify">
+              {{ $t('sections.summary.p2') }}
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="bg-primary/10 p-3 rounded-full mb-3">
+            <svg
+              class="h-8 w-8 text-primary"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="currentColor"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M8.01005 0.858582L6.01005 14.8586L7.98995 15.1414L9.98995 1.14142L8.01005 0.858582Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M12.5 11.5L11.0858 10.0858L13.1716 8L11.0858 5.91422L12.5 4.5L16 8L12.5 11.5Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M2.82843 8L4.91421 10.0858L3.5 11.5L0 8L3.5 4.5L4.91421 5.91422L2.82843 8Z"
+                  fill="currentColor"
+                ></path>
+              </g>
+            </svg>
+          </div>
+          <h2 class="text-2xl md:text-3xl font-bold text-center text-primary">
+            <span class="bg-clip-text from-primary to-accent">{{
+              $t('sections.skills.title')
+            }}</span>
+          </h2>
+        </div>
+
+        <!-- Badges de tecnologías destacadas -->
+        <div class="flex flex-wrap justify-center gap-2 mt-6">
+          <FlutterBadge />
+
+          <TypescriptBadge />
+
+          <JavascriptBadge />
+
+          <VuejsBadge />
+
+          <HtmlBadge />
+
+          <CssBadge />
+
+          <JqueryBadge />
+
+          <CodeigniterBadge />
+
+          <LaravelBadge />
+
+          <PhpBadge />
+          <div class="badge badge-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+              />
+            </svg>
+            Fullstack Developer
+          </div>
+          <div class="badge badge-secondary gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+              />
+            </svg>
+            4 años experiencia
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
-
-<style scoped>
-/* Transición suave para hover */
-.transition-colors {
-  transition-duration: 200ms;
-}
-</style>
+<script setup lang="ts">
+import CodeigniterBadge from '@/components/badges/CodeigniterBadge.vue';
+import CssBadge from '@/components/badges/CssBadge.vue';
+import FlutterBadge from '@/components/badges/FlutterBadge.vue';
+import HtmlBadge from '@/components/badges/HtmlBadge.vue';
+import JavascriptBadge from '@/components/badges/JavascriptBadge.vue';
+import JqueryBadge from '@/components/badges/JqueryBadge.vue';
+import LaravelBadge from '@/components/badges/LaravelBadge.vue';
+import PhpBadge from '@/components/badges/PhpBadge.vue';
+import TypescriptBadge from '@/components/badges/TypescriptBadge.vue';
+import VuejsBadge from '@/components/badges/VuejsBadge.vue';
+</script>

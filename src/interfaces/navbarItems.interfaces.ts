@@ -1,5 +1,5 @@
 export enum MenuItem {
-  summery = 'summary',
+  summary = 'summary',
   projects = 'projects',
 }
 

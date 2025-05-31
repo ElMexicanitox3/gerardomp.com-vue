@@ -1,0 +1,60 @@
+<template>
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000" :class="svgClass">
+    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+    <g id="SVGRepo_iconCarrier">
+      <title>file_type_flutter</title>
+      <polyline
+        points="15.383 18.316 18.744 15.042 27.093 15.042 19.697 22.438 15.383 18.316 15.383 18.316 15.383 18.316 15.383 18.316 15.383 18.316"
+        :style="fillStyle(0)"
+      ></polyline>
+      <polygon
+        points="4.907 16.125 9.106 20.424 27.093 2.287 18.744 2.287 4.907 16.125"
+        :style="fillStyle(1)"
+      ></polygon>
+      <polygon
+        points="11.176 22.479 15.435 26.675 19.697 22.438 15.383 18.316 11.176 22.479"
+        :style="fillStyle(2)"
+      ></polygon>
+      <polygon
+        points="15.435 26.675 19.697 22.438 26.989 29.813 18.593 29.813 15.435 26.675"
+        :style="fillStyle(3)"
+      ></polygon>
+      <polygon
+        points="15.435 26.675 19.406 25.354 18.068 24.057 15.435 26.675"
+        :style="fillStyle(4)"
+      ></polygon>
+    </g>
+  </svg>
+</template>
+
+<script setup lang="ts">
+import { computed } from 'vue';
+
+type IconColor = 'default' | 'white';
+
+const props = withDefaults(
+  defineProps<{
+    color?: IconColor;
+    size?: string;
+  }>(),
+  {
+    color: 'default',
+    size: 'h-5 w-5',
+  },
+);
+
+const svgClass = computed(() => [props.size, props.color === 'white' ? 'text-white' : '']);
+const defaultColors = [
+  '#40d0fd', // original blue 1
+  '#41d0fd', // original blue 2
+  '#1fbcfd', // original blue 3
+  '#095a9d', // original dark blue 1
+  '#0e5199', // original dark blue 2
+];
+const fillStyle = (index: number) => {
+  return props.color === 'white' ? { fill: 'currentColor' } : { fill: defaultColors[index] };
+};
+</script>
+
+<style scoped></style>
