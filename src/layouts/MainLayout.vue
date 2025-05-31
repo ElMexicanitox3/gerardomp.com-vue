@@ -10,42 +10,33 @@ import ProjectsView from '@/views/projectsView.vue';
 import SummaryView from '@/views/summaryView.vue';
 
 import { onBeforeUnmount, onMounted, ref } from 'vue';
-import { MenuItem, type MenuOptions } from '@/interfaces/navbarItems.interfaces';
 import LangComponent from '@/components/LangComponent.vue';
 
-const sections: MenuOptions[] = [
-  {
-    id: 'summary',
-    title: MenuItem.summary,
-  },
-  {
-    id: 'projects',
-    title: MenuItem.projects,
-  },
-];
+const sections: string[] = ['summary', 'projects'];
 
-const currentTitle = ref('summary');
+const currentTitle = ref(sections[0]);
 const navbarHeight = 64; // Ajusta según la altura real de tu navbar
 
 const handleScroll = () => {
   const scrollPosition = window.scrollY + navbarHeight;
 
   for (let i = sections.length - 1; i >= 0; i--) {
-    const section = document.getElementById(sections[i].id);
+    const section = document.getElementById(sections[i]);
     if (section) {
       const sectionTop = section.offsetTop;
       const sectionBottom = sectionTop + section.offsetHeight;
 
       if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-        currentTitle.value = sections[i].title;
+        currentTitle.value = sections[i];
         break;
       }
     }
   }
 };
 
-const handleSectionClick = (sectionId: string) => {
-  const element = document.getElementById(sectionId);
+const handleSectionClick = (section: string) => {
+  console.log('handleSectionClick', section);
+  const element = document.getElementById(section);
   if (element) {
     const rect = element.getBoundingClientRect();
     const customOffset = 15;
@@ -56,6 +47,7 @@ const handleSectionClick = (sectionId: string) => {
       behavior: 'smooth',
     });
     // element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    currentTitle.value = section;
   }
 };
 

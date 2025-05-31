@@ -9,13 +9,13 @@
     <div class="flex-none">
       <ul class="menu menu-horizontal px-1">
         <!-- propery menuItem does not exist -->
-        <li v-for="item in menuItems" :key="item.id">
+        <li v-for="item in menuItems" :key="item">
           <a
             class="text-sm sm:text-base"
-            :class="{ 'text-primary font-semibold': currentTitle === item.title }"
-            @click="$emit('section-click', item.title)"
+            :class="{ 'text-primary font-semibold': currentTitle === item }"
+            @click="$emit('section-click', item)"
           >
-            {{ $t(`sections.${item.title}.title`) }}
+            {{ $t(`sections.${item}.title`) }}
           </a>
         </li>
       </ul>
@@ -24,13 +24,11 @@
 </template>
 
 <script setup lang="ts">
-import type { MenuOptions } from '@/interfaces/navbarItems.interfaces';
-
 const props = defineProps<{
   currentTitle: string;
-  menuItems: MenuOptions[];
+  menuItems: string[];
 }>();
-console.log(props.currentTitle);
+console.log(`NavbarComponent props:`, props.menuItems);
 
 defineEmits<{
   (e: 'section-click', sectionId: string): void;
