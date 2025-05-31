@@ -26,10 +26,11 @@
 <script setup lang="ts">
 import type { MenuOptions } from '@/interfaces/navbarItems.interfaces';
 
-defineProps<{
+const props = defineProps<{
   currentTitle: string;
   menuItems: MenuOptions[];
 }>();
+console.log(props.currentTitle);
 
 defineEmits<{
   (e: 'section-click', sectionId: string): void;

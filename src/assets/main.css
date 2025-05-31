@@ -1,11 +1,11 @@
 @import 'tailwindcss';
 @plugin "daisyui";
-@plugin "daisyui/theme" {  color-scheme: light; /* color of browser-provided UI */
-  name: "dark";
+@plugin "daisyui/theme" {
+  color-scheme: light; /* color of browser-provided UI */
+  name: 'dark';
   default: true;
   prefersdark: true;
   color-scheme: dark;
 
-
-  --color-primary: #df5a68
+  --color-primary: #df5a68;
 }
