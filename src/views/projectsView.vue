@@ -31,104 +31,25 @@
             }}</span>
           </h2>
         </div>
-        <div class="mt-4">
-          <p class="text-sm md:text-base text-gray-700">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit optio beatae facere fuga a,
-            dolores, odit incidunt, fugit dicta assumenda suscipit temporibus quos architecto sequi?
-            Eligendi quidem officia consequuntur dignissimos! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Officia magnam eum voluptates velit totam recusandae voluptatum illo
-            blanditiis tempora incidunt. Sunt eveniet provident labore cumque est perferendis.
-            Debitis, veritatis adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Iure doloremque laboriosam, ea minus nulla rerum, atque doloribus tempore, quidem quasi
-            laudantium ullam. Atque libero consectetur rerum sit maiores quo maxime. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Sit optio beatae facere fuga a, dolores,
-            odit incidunt, fugit dicta assumenda suscipit temporibus quos architecto sequi? Eligendi
-            quidem officia consequuntur dignissimos! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Officia magnam eum voluptates velit totam recusandae voluptatum illo
-            blanditiis tempora incidunt. Sunt eveniet provident labore cumque est perferendis.
-            Debitis, veritatis adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Iure doloremque laboriosam, ea minus nulla rerum, atque doloribus tempore, quidem quasi
-            laudantium ullam. Atque libero consectetur rerum sit maiores quo maxime. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Sit optio beatae facere fuga a, dolores,
-            odit incidunt, fugit dicta assumenda suscipit temporibus quos architecto sequi? Eligendi
-            quidem officia consequuntur dignissimos! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Officia magnam eum voluptates velit totam recusandae voluptatum illo
-            blanditiis tempora incidunt. Sunt eveniet provident labore cumque est perferendis.
-            Debitis, veritatis adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Iure doloremque laboriosam, ea minus nulla rerum, atque doloribus tempore, quidem quasi
-            laudantium ullam. Atque libero consectetur rerum sit maiores quo maxime. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Sit optio beatae facere fuga a, dolores,
-            odit incidunt, fugit dicta assumenda suscipit temporibus quos architecto sequi? Eligendi
-            quidem officia consequuntur dignissimos! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Officia magnam eum voluptates velit totam recusandae voluptatum illo
-            blanditiis tempora incidunt. Sunt eveniet provident labore cumque est perferendis.
-            Debitis, veritatis adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Iure doloremque laboriosam, ea minus nulla rerum, atque doloribus tempore, quidem quasi
-            laudantium ullam. Atque libero consectetur rerum sit maiores quo maxime. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Sit optio beatae facere fuga a, dolores,
-            odit incidunt, fugit dicta assumenda suscipit temporibus quos architecto sequi? Eligendi
-            quidem officia consequuntur dignissimos! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Officia magnam eum voluptates velit totam recusandae voluptatum illo
-            blanditiis tempora incidunt. Sunt eveniet provident labore cumque est perferendis.
-            Debitis, veritatis adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Iure doloremque laboriosam, ea minus nulla rerum, atque doloribus tempore, quidem quasi
-            laudantium ullam. Atque libero consectetur rerum sit maiores quo maxime. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Sit optio beatae facere fuga a, dolores,
-            odit incidunt, fugit dicta assumenda suscipit temporibus quos architecto sequi? Eligendi
-            quidem officia consequuntur dignissimos! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Officia magnam eum voluptates velit totam recusandae voluptatum illo
-            blanditiis tempora incidunt. Sunt eveniet provident labore cumque est perferendis.
-            Debitis, veritatis adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Iure doloremque laboriosam, ea minus nulla rerum, atque doloribus tempore, quidem quasi
-            laudantium ullam. Atque libero consectetur rerum sit maiores quo maxime. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Sit optio beatae facere fuga a, dolores,
-            odit incidunt, fugit dicta assumenda suscipit temporibus quos architecto sequi? Eligendi
-            quidem officia consequuntur dignissimos! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Officia magnam eum voluptates velit totam recusandae voluptatum illo
-            blanditiis tempora incidunt. Sunt eveniet provident labore cumque est perferendis.
-            Debitis, veritatis adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Iure doloremque laboriosam, ea minus nulla rerum, atque doloribus tempore, quidem quasi
-            laudantium ullam. Atque libero consectetur rerum sit maiores quo maxime. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Sit optio beatae facere fuga a, dolores,
-            odit incidunt, fugit dicta assumenda suscipit temporibus quos architecto sequi? Eligendi
-            quidem officia consequuntur dignissimos! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Officia magnam eum voluptates velit totam recusandae voluptatum illo
-            blanditiis tempora incidunt. Sunt eveniet provident labore cumque est perferendis.
-            Debitis, veritatis adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Iure doloremque laboriosam, ea minus nulla rerum, atque doloribus tempore, quidem quasi
-            laudantium ullam. Atque libero consectetur rerum sit maiores quo maxime. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Sit optio beatae facere fuga a, dolores,
-            odit incidunt, fugit dicta assumenda suscipit temporibus quos architecto sequi? Eligendi
-            quidem officia consequuntur dignissimos! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Officia magnam eum voluptates velit totam recusandae voluptatum illo
-            blanditiis tempora incidunt. Sunt eveniet provident labore cumque est perferendis.
-            Debitis, veritatis adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Iure doloremque laboriosam, ea minus nulla rerum, atque doloribus tempore, quidem quasi
-            laudantium ullam. Atque libero consectetur rerum sit maiores quo maxime. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Sit optio beatae facere fuga a, dolores,
-            odit incidunt, fugit dicta assumenda suscipit temporibus quos architecto sequi? Eligendi
-            quidem officia consequuntur dignissimos! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Officia magnam eum voluptates velit totam recusandae voluptatum illo
-            blanditiis tempora incidunt. Sunt eveniet provident labore cumque est perferendis.
-            Debitis, veritatis adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Iure doloremque laboriosam, ea minus nulla rerum, atque doloribus tempore, quidem quasi
-            laudantium ullam. Atque libero consectetur rerum sit maiores quo maxime. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Sit optio beatae facere fuga a, dolores,
-            odit incidunt, fugit dicta assumenda suscipit temporibus quos architecto sequi? Eligendi
-            quidem officia consequuntur dignissimos! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Officia magnam eum voluptates velit totam recusandae voluptatum illo
-            blanditiis tempora incidunt. Sunt eveniet provident labore cumque est perferendis.
-            Debitis, veritatis adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Iure doloremque laboriosam, ea minus nulla rerum, atque doloribus tempore, quidem quasi
-            laudantium ullam. Atque libero consectetur rerum sit maiores quo maxime.
-          </p>
+        <div class="mt-4 w-full">
+          <div class="grid gap-4 grid-cols-1 xl:grid-cols-1 2xl:grid-cols-2">
+            <CardMobile
+              v-for="(project, index) in projects"
+              :key="index"
+              :card-data="project"
+              class="transition-colors hover:bg-primary/10 rounded-lg mb-4"
+            />
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import CardMobile from '@/components/CardMobile.vue';
+import { projects } from '@/data/projectsData';
+</script>
 
 <style scoped>
 /* Transición suave para hover */

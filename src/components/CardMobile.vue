@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative rounded-lg p-2 overflow-hidden w-[388px] h-[462px] md:w-[700px] md:h-[500px] lg:w-[400px] lg:h-[340px] xl:w-[600px] xl:h-[340px]"
+    class="relative rounded-lg p-2 overflow-hidden w-auto h-auto md:h-[300px] xl:h-[300px] 2xl:w-[480px]"
     :class="`${cardData.backgroundColor} ${cardData.textColor}`"
   >
     <!-- Contenido dividido en dos columnas -->
@@ -71,7 +71,8 @@
 <script setup lang="ts">
 import { type CardMobileInterface } from '@/interfaces/CardMobileInterface.interface';
 
-const cardData = defineProps<CardMobileInterface>();
+const props = defineProps<{ cardData: CardMobileInterface }>();
+const cardData = props.cardData;
 </script>
 
 <style scoped></style>
