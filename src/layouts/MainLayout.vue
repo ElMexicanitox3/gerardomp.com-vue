@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import EmailIcon from '@/icons/EmailIcon.vue';
-import PhoneIcon from '@/icons/PhoneIcon.vue';
-import PinIcon from '@/icons/PinIcon.vue';
-import GithubIcon from '@/icons/GithubIcon.vue';
-import LinkedinIcon from '@/icons/LinkedinIcon.vue';
+import EmailIcon from '@/icons/emailIcon.vue';
+import PhoneIcon from '@/icons/phoneIcon.vue';
+import PinIcon from '@/icons/pinIcon.vue';
+import GithubIcon from '@/icons/githubIcon.vue';
+import LinkedinIcon from '@/icons/linkedinIcon.vue';
 
 import NavbarComponent from '@/components/NavbarComponent.vue';
 import ProjectsView from '@/views/projectsView.vue';
@@ -128,7 +128,7 @@ onBeforeUnmount(() => {
                   </div>
                   <div class="list-col-grow">
                     <div>{{ $t('porfileCard.address') }}</div>
-                    <div class="text-xs font-semibold opacity-60">Chihuahua, Mexico</div>
+                    <div class="text-xs font-semibold opacity-60">CDMX, Mexico</div>
                   </div>
                 </li>
               </ul>
