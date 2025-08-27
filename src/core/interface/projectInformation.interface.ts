@@ -1,6 +1,7 @@
-export interface CardMobileInterface {
-  title: string;
-  image: string;
+import type { Project } from '@/core/interface/project.interface';
+
+export interface ProjectInformation extends Project {
+  description?: string;
   category?: string;
   isOnPlayStore: boolean;
   isOnAppStore: boolean;
@@ -8,10 +9,10 @@ export interface CardMobileInterface {
   urlAppStore?: string;
   backgroundColor?: string;
   textColor?: string;
-  badges: CardMobileBadge[];
+  badges: Badge[];
 }
 
-interface CardMobileBadge {
+export interface Badge {
   name: string;
   color: string;
   textColor: string;

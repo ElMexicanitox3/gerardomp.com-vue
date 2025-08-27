@@ -1,9 +1,10 @@
-import type { CardMobileInterface } from '@/features/home/interfaces/CardMobileInterface.interface';
+import type { ProjectInformation } from '@/core/interface/projectInformation.interface';
 
-export const projects: CardMobileInterface[] = [
+export const projects: ProjectInformation[] = [
   {
-    title: 'WEC',
-    image: '/assets/wecmovil.png',
+    name: 'WEC',
+    description: 'WEC Movil',
+    screenImage: '/assets/wecmovil.png',
     backgroundColor: 'bg-neutral-950',
     textColor: 'text-white',
     badges: [
@@ -18,8 +19,8 @@ export const projects: CardMobileInterface[] = [
     isOnAppStore: false,
   },
   {
-    title: 'NoteHub',
-    image: '/assets/notehub.png',
+    name: 'NoteHub',
+    screenImage: '/assets/notehub.png',
     backgroundColor: 'bg-amber-400',
     textColor: 'text-black',
     isOnPlayStore: true,
@@ -35,8 +36,8 @@ export const projects: CardMobileInterface[] = [
     isOnAppStore: false,
   },
   {
-    title: 'AstroMap',
-    image: '/assets/astromap.png',
+    name: 'AstroMap',
+    screenImage: '/assets/astromap.png',
     backgroundColor: 'bg-neutral-950',
     textColor: 'text-white',
     badges: [
@@ -51,8 +52,8 @@ export const projects: CardMobileInterface[] = [
     isOnAppStore: false,
   },
   {
-    title: 'SIMAO',
-    image: '/assets/simao.png',
+    name: 'SIMAO',
+    screenImage: '/assets/simao.png',
     isOnPlayStore: true,
     urlPlayStore: 'https://play.google.com/store/apps/details?id=app.simao',
     backgroundColor: 'bg-blue-500',

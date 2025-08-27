@@ -20,7 +20,7 @@
           >
             {{ cardData.category }}
           </div>
-          <h2 class="text-4xl font-semibold mt-4">{{ cardData.title }}</h2>
+          <h2 class="text-4xl font-semibold mt-4">{{ cardData.name }}</h2>
         </div>
 
         <div
@@ -62,16 +62,20 @@
 
       <!-- Imagen del screen (segunda columna) -->
       <div class="basis-1/2 relative">
-        <img :src="cardData.image" alt="Screen" class="md:absolute md:right-[10px] md:top-[10px]" />
+        <img
+          :src="cardData.screenImage"
+          alt="Screen"
+          class="md:absolute md:right-[10px] md:top-[10px]"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { type CardMobileInterface } from '@/features/home/interfaces/CardMobileInterface.interface';
+import { type ProjectInformation } from '@/core/interface/projectInformation.interface';
 
-const props = defineProps<{ cardData: CardMobileInterface }>();
+const props = defineProps<{ cardData: ProjectInformation }>();
 const cardData = props.cardData;
 </script>
 
