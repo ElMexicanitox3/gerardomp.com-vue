@@ -8,7 +8,6 @@
     </div>
     <div class="flex-none">
       <ul class="menu menu-horizontal px-1">
-        <!-- propery menuItem does not exist -->
         <li v-for="item in menuItems" :key="item">
           <a
             class="text-sm sm:text-base"
