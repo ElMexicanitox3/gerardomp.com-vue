@@ -1,4 +1,4 @@
-import type { CardMobileInterface } from '@/interfaces/CardMobileInterface.interface';
+import type { CardMobileInterface } from '@/features/home/interfaces/CardMobileInterface.interface';
 
 export const projects: CardMobileInterface[] = [
   {

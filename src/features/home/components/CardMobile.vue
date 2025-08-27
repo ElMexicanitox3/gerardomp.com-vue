@@ -69,7 +69,7 @@
 </template>
 
 <script setup lang="ts">
-import { type CardMobileInterface } from '@/interfaces/CardMobileInterface.interface';
+import { type CardMobileInterface } from '@/features/home/interfaces/CardMobileInterface.interface';
 
 const props = defineProps<{ cardData: CardMobileInterface }>();
 const cardData = props.cardData;

@@ -116,15 +116,15 @@
 </template>
 
 <script setup lang="ts">
-import CodeigniterBadge from '@/components/badges/CodeigniterBadge.vue';
-import CssBadge from '@/components/badges/CssBadge.vue';
-import FlutterBadge from '@/components/badges/FlutterBadge.vue';
-import HtmlBadge from '@/components/badges/HtmlBadge.vue';
-import JavascriptBadge from '@/components/badges/JavascriptBadge.vue';
-import JqueryBadge from '@/components/badges/JqueryBadge.vue';
-import LaravelBadge from '@/components/badges/LaravelBadge.vue';
-import PhpBadge from '@/components/badges/PhpBadge.vue';
-import PythonBadge from '@/components/badges/PythonBadge.vue';
-import TypescriptBadge from '@/components/badges/TypescriptBadge.vue';
-import VuejsBadge from '@/components/badges/VuejsBadge.vue';
+import CodeigniterBadge from '@/features/home/components/badges/CodeigniterBadge.vue';
+import CssBadge from '@/features/home/components/badges/CssBadge.vue';
+import FlutterBadge from '@/features/home/components/badges/FlutterBadge.vue';
+import HtmlBadge from '@/features/home/components/badges/HtmlBadge.vue';
+import JavascriptBadge from '@/features/home/components/badges/JavascriptBadge.vue';
+import JqueryBadge from '@/features/home/components/badges/JqueryBadge.vue';
+import LaravelBadge from '@/features/home/components/badges/LaravelBadge.vue';
+import PhpBadge from '@/features/home/components/badges/PhpBadge.vue';
+import PythonBadge from '@/features/home/components/badges/PythonBadge.vue';
+import TypescriptBadge from '@/features/home/components/badges/TypescriptBadge.vue';
+import VuejsBadge from '@/features/home/components/badges/VuejsBadge.vue';
 </script>

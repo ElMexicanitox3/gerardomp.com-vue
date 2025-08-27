@@ -1,14 +1,14 @@
 <template>
-  <CustomBadge text="Typescript" class="bg-sky-600 text-white">
+  <CustomBadge text="Laravel" class="bg-red-200 text-white">
     <template #icon>
-      <TypescriptIcon size="h-4 w-4" color="white" />
+      <LaravelIcon size="h-4 w-4" />
     </template>
   </CustomBadge>
 </template>
 
 <script setup lang="ts">
 import CustomBadge from '../CustomBadge.vue';
-import TypescriptIcon from '@/icons/TypescriptIcon.vue';
+import LaravelIcon from '@/assets/icons/LaravelIcon.vue';
 </script>
 
 <style scoped></style>

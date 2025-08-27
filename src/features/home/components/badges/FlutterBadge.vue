@@ -1,14 +1,14 @@
 <template>
-  <CustomBadge text="Jquery" class="bg-blue-700 text-white">
+  <CustomBadge text="Flutter" class="bg-blue-700 text-white">
     <template #icon>
-      <JqueryIcon size="h-4 w-4" />
+      <FlutterIcon size="h-4 w-4" color="white" />
     </template>
   </CustomBadge>
 </template>
 
 <script setup lang="ts">
 import CustomBadge from '../CustomBadge.vue';
-import JqueryIcon from '@/icons/JqueryIcon.vue';
+import FlutterIcon from '@/assets/icons/FlutterIcon.vue';
 </script>
 
 <style scoped></style>

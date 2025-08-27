@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import EmailIcon from '@/icons/emailIcon.vue';
-import PhoneIcon from '@/icons/phoneIcon.vue';
-import PinIcon from '@/icons/pinIcon.vue';
-import GithubIcon from '@/icons/githubIcon.vue';
-import LinkedinIcon from '@/icons/linkedinIcon.vue';
+import EmailIcon from '@/assets/icons/emailIcon.vue';
+import PhoneIcon from '@/assets/icons/phoneIcon.vue';
+import PinIcon from '@/assets/icons/pinIcon.vue';
+import GithubIcon from '@/assets/icons/githubIcon.vue';
+import LinkedinIcon from '@/assets/icons/linkedinIcon.vue';
 
-import NavbarComponent from '@/components/NavbarComponent.vue';
-import ProjectsView from '@/views/projectsView.vue';
-import SummaryView from '@/views/summaryView.vue';
+import NavbarComponent from '@/features/home/components/NavbarComponent.vue';
+import ProjectsView from '@/features/home/views/projectsView.vue';
+import SummaryView from '@/features/home/views/summaryView.vue';
 
 import { onBeforeUnmount, onMounted, ref } from 'vue';
-import LangComponent from '@/components/LangComponent.vue';
+import LangComponent from '@/features/home/components/LangComponent.vue';
 
 const sections: string[] = ['summary', 'projects'];
 

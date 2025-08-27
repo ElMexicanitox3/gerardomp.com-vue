@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import { useLangStore, type LanguageCode } from '@/stores/lang.store';
+import { useLangStore, type LanguageCode } from '@/features/home/stores/lang.store';
 
 const langStore = useLangStore();
 const languages = langStore.getLanguages;

@@ -47,7 +47,7 @@
 </template>
 
 <script setup lang="ts">
-import CardMobile from '@/components/CardMobile.vue';
+import CardMobile from '@/features/home/components/CardMobile.vue';
 import { projects } from '@/data/projectsData';
 </script>
 

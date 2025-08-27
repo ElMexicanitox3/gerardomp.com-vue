@@ -1,14 +1,14 @@
 <template>
-  <CustomBadge text="HTML" class="bg-amber-800 text-white">
+  <CustomBadge text="Python" class="bg-blue-400 text-white">
     <template #icon>
-      <HtmlIcon size="h-4 w-4" />
+      <PythonIcon size="h-8 w-6" />
     </template>
   </CustomBadge>
 </template>
 
 <script setup lang="ts">
-import HtmlIcon from '@/icons/HtmlIcon.vue';
 import CustomBadge from '../CustomBadge.vue';
+import PythonIcon from '@/assets/icons/PythonIcon.vue';
 </script>
 
 <style scoped></style>

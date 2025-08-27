@@ -1,14 +1,14 @@
 <template>
-  <CustomBadge text="VueJs" class="bg-green-900 text-white">
+  <CustomBadge text="Jquery" class="bg-blue-700 text-white">
     <template #icon>
-      <VuejsIcon size="h-4 w-4" color="white" />
+      <JqueryIcon size="h-4 w-4" />
     </template>
   </CustomBadge>
 </template>
 
 <script setup lang="ts">
-import VuejsIcon from '@/icons/VuejsIcon.vue';
 import CustomBadge from '../CustomBadge.vue';
+import JqueryIcon from '@/assets/icons/JqueryIcon.vue';
 </script>
 
 <style scoped></style>

@@ -1,14 +1,14 @@
 <template>
-  <CustomBadge text="CSS" class="bg-blue-800 text-white">
+  <CustomBadge text="PHP" class="bg-blue-400 text-white">
     <template #icon>
-      <CssIcon size="h-4 w-4" />
+      <PhpIcon size="h-8 w-6" />
     </template>
   </CustomBadge>
 </template>
 
 <script setup lang="ts">
 import CustomBadge from '../CustomBadge.vue';
-import CssIcon from '@/icons/CssIcon.vue';
+import PhpIcon from '@/assets/icons/PhpIcon.vue';
 </script>
 
 <style scoped></style>
