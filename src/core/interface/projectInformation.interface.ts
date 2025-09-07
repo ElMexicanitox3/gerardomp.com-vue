@@ -9,6 +9,7 @@ export interface ProjectInformation extends Project {
   urlAppStore?: string;
   backgroundColor?: string;
   textColor?: string;
+  gallery?: string[];
   badges: Badge[];
 }
 
