@@ -1,7 +1,7 @@
 import type { Project } from '@/core/interface/project.interface';
 
 export interface ProjectInformation extends Project {
-  description?: string;
+  contentMd?: string;
   category?: string;
   isOnPlayStore: boolean;
   isOnAppStore: boolean;

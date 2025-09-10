@@ -55,6 +55,8 @@ export const projects: ProjectInformation[] = [
   },
   {
     name: 'SIMAO',
+    description:
+      'description: **Proyecto: SIMAO**\n\nSistema Integral de Mantenimiento, Administración y Operaciones de Obras.',
     screenImage: '/assets/simao.png',
     isOnPlayStore: true,
     urlPlayStore: 'https://play.google.com/store/apps/details?id=app.simao',

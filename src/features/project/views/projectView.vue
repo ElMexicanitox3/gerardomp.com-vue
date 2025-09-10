@@ -36,28 +36,12 @@
     <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="max-w-4xl mx-auto space-y-8">
         <div class="card bg-base-200 shadow-xl">
-          <div class="card-body">
-            <h2 class="card-title text-2xl">Descripción</h2>
-            <p class="text-base-content/80 mt-2">{{ project.description }}</p>
+          <div class="">
+            <div class="markdown-body p-4 bg-base-200" v-html="markdownContent"></div>
           </div>
         </div>
 
-        <div class="card bg-base-200 shadow-xl">
-          <div class="card-body">
-            <h2 class="card-title text-2xl">Tecnologías Utilizadas</h2>
-            <div v-if="project.badges?.length" class="flex flex-wrap gap-3 mt-4">
-              <span
-                v-for="badge in project.badges"
-                :key="badge.name"
-                class="badge badge-lg badge-outline"
-              >
-                {{ badge.name }}
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card bg-base-200 shadow-xl">
+        <div v-if="project.gallery" class="card bg-base-200 shadow-xl">
           <div class="card-body">
             <h2 class="card-title text-2xl">Galería</h2>
             <div v-if="project.gallery?.length" class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
@@ -125,16 +109,20 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
+import 'github-markdown-css/github-markdown.css';
 
 const route = useRoute();
 const projectName = ref<string>();
 const project = ref<ProjectInformation>();
 
-import { projects } from '@/data/projectsData';
+import { projects } from '@/core/data/projectsData';
 import router from '@/router';
 import type { ProjectInformation } from '@/core/interface/projectInformation.interface';
+import { marked } from 'marked';
 
-onMounted(() => {
+const markdownContent = ref('');
+
+onMounted(async () => {
   const nameParam = route.params.name;
   projectName.value = Array.isArray(nameParam) ? nameParam[0] : nameParam;
 
@@ -144,9 +132,18 @@ onMounted(() => {
   } else {
     router.push({ name: 'home' });
   }
+
+  const response = await fetch('../../src/core/data/content/simao.md'); // archivo en public/ o assets
+  console.log(response);
+  const text = await response.text();
+  markdownContent.value = await marked(text);
 });
 
 console.log(project);
 </script>
 
-<style scoped></style>
+<style scoped>
+.markdown-body {
+  background-color: #191e24 !important;
+}
+</style>
