@@ -133,8 +133,8 @@ onMounted(async () => {
     router.push({ name: 'home' });
   }
 
-  const response = await fetch('/content/simao.md'); //ACORTAR
-  console.log(response);
+  const response = await fetch('/content/' + projectName.value.toLowerCase() + '.md');
+
   const text = await response.text();
   markdownContent.value = await marked(text);
 });
