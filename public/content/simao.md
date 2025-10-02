@@ -6,12 +6,6 @@ SIMAO es una aplicación móvil desarrollada como una **solución integral (B2B)
 
 ---
 
-## Mi Rol en el Proyecto 👨‍💻
-
-_(Aquí debes poner tu participación específica. Ej: Desarrollador Android Líder, Diseñador UI/UX, Project Manager, Desarrollador Full-Stack, etc.)_
-
----
-
 ## El Problema a Resolver 🎯
 
 La gestión de obras de construcción frecuentemente enfrenta desafíos como la falta de seguimiento en tiempo real del uso de materiales, una comunicación ineficiente entre los equipos de campo y oficina, y dificultades para controlar el acceso a la información sensible del proyecto. Esto resulta en **retrasos, sobrecostos y una administración reactiva** en lugar de proactiva.
@@ -35,7 +29,6 @@ SIMAO aborda estos desafíos a través de una plataforma unificada que ofrece m�
 
 ### Tecnologías Utilizadas 💻
 
-- **Frontend:** `[Ej: Kotlin, Jetpack Compose, Swift, React Native...]`
-- **Backend:** `[Ej: Node.js, Firebase, Python con Django, PHP con Laravel...]`
-- **Base de Datos:** `[Ej: PostgreSQL, MySQL, Firebase Firestore, MongoDB...]`
-- **Otros:** `[Ej: Git para control de versiones, Figma para diseño, Jira para gestión de tareas...]`
+- **Framework:** `[Flutter]`
+- **Gestor de estado:** `[Bloc]`
+- **Base de Datos:** `[Hive(NoSql)]`

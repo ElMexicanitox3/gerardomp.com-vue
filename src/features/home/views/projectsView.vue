@@ -48,7 +48,7 @@
 
 <script setup lang="ts">
 import CardMobile from '@/features/home/components/CardMobile.vue';
-import { projects } from '@/core/data/projectsData';
+import { projects } from '../../../core/data/projectsData';
 </script>
 
 <style scoped>

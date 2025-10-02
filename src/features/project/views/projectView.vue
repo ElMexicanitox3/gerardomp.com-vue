@@ -133,7 +133,7 @@ onMounted(async () => {
     router.push({ name: 'home' });
   }
 
-  const response = await fetch('../../src/core/data/content/simao.md'); // archivo en public/ o assets
+  const response = await fetch('/content/simao.md'); //ACORTAR
   console.log(response);
   const text = await response.text();
   markdownContent.value = await marked(text);
@@ -145,5 +145,6 @@ console.log(project);
 <style scoped>
 .markdown-body {
   background-color: #191e24 !important;
+  color: #fff;
 }
 </style>
