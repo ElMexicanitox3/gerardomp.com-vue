@@ -36,7 +36,7 @@ Nos reservamos el derecho de modificar estos términos en cualquier momento. Se 
 
 Si tiene alguna pregunta sobre estos Términos y Condiciones, puede contactar con el desarrollador:
 
-Gerardo Matadamas Peralta
+Gerardo Matadama Peralta
 [gerardo.matadama@gmail.com](mailto:gerardo.matadama@gmail.com)
 
 ---
