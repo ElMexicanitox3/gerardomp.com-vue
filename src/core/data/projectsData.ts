@@ -2,6 +2,24 @@ import type { ProjectInformation } from '@/core/interface/projectInformation.int
 
 export const projects: ProjectInformation[] = [
   {
+    name: 'YesNoApp',
+    hasPrivacyPolicy: true,
+    description: 'WEC Movil',
+    screenImage: '/assets/yesnoapp.png',
+    backgroundColor: 'bg-blue-600',
+    textColor: 'text-white',
+    badges: [
+      {
+        name: 'Flutter',
+        color: 'dark:bg-gray-700 border-white-400',
+        textColor: 'dark:text-white-400',
+        icon: 'fa-brands fa-flutter mr-1',
+      },
+    ],
+    isOnPlayStore: true,
+    isOnAppStore: false,
+  },
+  {
     name: 'WEC',
     description: 'WEC Movil',
     screenImage: '/assets/wecmovil.png',
