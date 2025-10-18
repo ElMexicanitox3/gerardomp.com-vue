@@ -20,6 +20,7 @@ export const projects: ProjectInformation[] = [
   },
   {
     name: 'NoteHub',
+    hasPrivacyPolicy: true,
     description:
       'NoteHub descropction, Id officia occaecat cillum amet est qui laborum esse id veniam eiusmod.',
     screenImage: '/assets/notehub.png',

@@ -4,7 +4,11 @@
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <button
-            @click="$router.back()"
+            @click="
+              {
+                router.push({ name: 'home' });
+              }
+            "
             class="btn btn-ghost btn-circle"
             aria-label="Volver a la página anterior"
           >
@@ -67,37 +71,56 @@
           </div>
         </div>
 
-        <div class="card bg-base-200 shadow-xl">
+        <!-- Politica de privacidad button -->
+        <div
+          v-if="
+            project.hasPrivacyPolicy &&
+            route.name !== 'privacy-policy' &&
+            (project.isOnAppStore || project.isOnPlayStore)
+          "
+          class="card bg-base-200 shadow-xl"
+        >
           <div class="card-body">
-            <h2 class="card-title text-2xl">Descargar</h2>
-            <div
-              class="flex items-center gap-4 mt-4"
-              v-if="project.isOnAppStore || project.isOnPlayStore"
-            >
-              <a
-                v-if="project.isOnAppStore && project.urlAppStore"
-                :href="project.urlAppStore"
-                target="_blank"
-                rel="noopener noreferrer"
+            <h2 class="card-title text-2xl">Política de Privacidad</h2>
+            <a :href="project.name + '/privacy-policy'" rel="noopener noreferrer">
+              <button class="btn btn-primary mt-4">Ver Política de Privacidad</button>
+            </a>
+          </div>
+        </div>
+
+        <div v-if="project.isOnAppStore || project.isOnPlayStore">
+          <div class="card bg-base-200 shadow-xl">
+            <div class="card-body">
+              <h2 class="card-title text-2xl">Descargar</h2>
+              <div
+                class="flex items-center gap-4 mt-4"
+                v-if="project.isOnAppStore || project.isOnPlayStore"
               >
-                <img
-                  src="/assets/app-store.svg"
-                  alt="Descargar en App Store"
-                  class="w-40 hover:opacity-80 transition-opacity"
-                />
-              </a>
-              <a
-                v-if="project.isOnPlayStore && project.urlPlayStore"
-                :href="project.urlPlayStore"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="/assets/google-play.svg"
-                  alt="Descargar en Google Play"
-                  class="w-40 hover:opacity-80 transition-opacity"
-                />
-              </a>
+                <a
+                  v-if="project.isOnAppStore && project.urlAppStore"
+                  :href="project.urlAppStore"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/assets/app-store.svg"
+                    alt="Descargar en App Store"
+                    class="w-40 hover:opacity-80 transition-opacity"
+                  />
+                </a>
+                <a
+                  v-if="project.isOnPlayStore && project.urlPlayStore"
+                  :href="project.urlPlayStore"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/assets/google-play.svg"
+                    alt="Descargar en Google Play"
+                    class="w-40 hover:opacity-80 transition-opacity"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -124,16 +147,38 @@ const markdownContent = ref('');
 
 onMounted(async () => {
   const nameParam = route.params.name;
+
   projectName.value = Array.isArray(nameParam) ? nameParam[0] : nameParam;
 
+  if (!projectName.value) {
+    router.push({ name: 'home' });
+  }
+
   const foundProject = projects.find((p) => p.name === projectName.value);
+
   if (foundProject) {
     project.value = foundProject;
   } else {
     router.push({ name: 'home' });
   }
 
-  const response = await fetch('/content/' + projectName.value.toLowerCase() + '.md');
+  let response;
+
+  if (route.name === 'privacy-policy') {
+    if (!project.value?.hasPrivacyPolicy) {
+      router.push({ name: 'home' });
+      return;
+    }
+
+    response = await fetch('/content/privacy/' + projectName.value.toLowerCase() + '.md');
+  } else {
+    response = await fetch('/content/projects/' + projectName.value.toLowerCase() + '.md');
+  }
+
+  if (!response.ok) {
+    router.push({ name: 'home' });
+    return;
+  }
 
   const text = await response.text();
   markdownContent.value = await marked(text);

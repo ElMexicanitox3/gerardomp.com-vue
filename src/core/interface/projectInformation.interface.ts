@@ -3,6 +3,7 @@ import type { Project } from '@/core/interface/project.interface';
 export interface ProjectInformation extends Project {
   contentMd?: string;
   category?: string;
+  hasPrivacyPolicy?: boolean;
   isOnPlayStore: boolean;
   isOnAppStore: boolean;
   urlPlayStore?: string;

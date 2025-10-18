@@ -15,6 +15,11 @@ const router = createRouter({
       name: 'project',
       component: projectView,
     },
+    {
+      path: '/project/:name/privacy-policy',
+      name: 'privacy-policy',
+      component: projectView, // Ira privacy view
+    },
   ],
 });
 
