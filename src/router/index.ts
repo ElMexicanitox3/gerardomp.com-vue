@@ -20,6 +20,10 @@ const router = createRouter({
       name: 'privacy-policy',
       component: projectView, // Ira privacy view
     },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: { name: 'home' },
+    },
   ],
 });
 
