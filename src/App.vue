@@ -1,13 +1,3 @@
-<script setup lang="js">
-</script>
-
-
 <template>
-
-  <router-view />
-
+  <RouterView />
 </template>
-
-
-<style scoped>
-</style>
