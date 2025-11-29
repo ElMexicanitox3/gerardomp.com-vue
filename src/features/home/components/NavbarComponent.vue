@@ -1,6 +1,6 @@
 <template>
   <div
-    class="navbar glass-effect flex-shrink-0 sticky top-4 z-50 rounded-2xl mb-6 mx-4 w-auto transition-all duration-300"
+    class="navbar glass-effect mt-4 flex-shrink-0 sticky top-4 z-50 rounded-2xl mb-6 mx-4 w-auto transition-all duration-300"
   >
     <div class="flex-1 text-lg sm:text-xl font-semibold ml-4">
       <div class="inline-block relative group cursor-default">
