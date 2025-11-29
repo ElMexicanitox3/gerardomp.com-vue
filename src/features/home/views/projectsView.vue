@@ -7,9 +7,10 @@
             <ProjectIcon class="h-10 w-10 text-primary" />
           </div>
           <h2 class="text-3xl md:text-4xl font-bold text-center">
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">{{
-              $t('sections.projects.title')
-            }}</span>
+            <span
+              class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"
+              >{{ $t('sections.projects.title') }}</span
+            >
           </h2>
         </div>
         <div class="mt-6 w-full">

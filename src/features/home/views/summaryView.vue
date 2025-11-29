@@ -7,9 +7,10 @@
             <UserIcon class="h-10 w-10 text-primary" />
           </div>
           <h2 class="text-3xl md:text-4xl font-bold text-center">
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">{{
-              $t('sections.summary.title')
-            }}</span>
+            <span
+              class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"
+              >{{ $t('sections.summary.title') }}</span
+            >
           </h2>
         </div>
 
@@ -41,9 +42,10 @@
             <SkillsIcon class="h-10 w-10 text-primary" />
           </div>
           <h2 class="text-3xl md:text-4xl font-bold text-center">
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">{{
-              $t('sections.skills.title')
-            }}</span>
+            <span
+              class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"
+              >{{ $t('sections.skills.title') }}</span
+            >
           </h2>
         </div>
 

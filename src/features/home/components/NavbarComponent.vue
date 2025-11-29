@@ -5,12 +5,12 @@
     <div class="flex-1 text-lg sm:text-xl font-semibold ml-4">
       <div class="inline-block relative group cursor-default">
         <h2
-          class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent"
+          class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"
         >
           {{ $t(`sections.${currentTitle}.title`) }}
         </h2>
         <div
-          class="h-1 w-0 group-hover:w-full transition-all duration-300 bg-gradient-to-r from-primary to-accent rounded-full mt-1"
+          class="h-1 w-0 group-hover:w-full transition-all duration-300 bg-gradient-to-r from-primary to-secondary rounded-full mt-1"
         ></div>
       </div>
     </div>
