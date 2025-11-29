@@ -1,23 +1,27 @@
 <template>
-  <div class="w-full mx-auto px-4 py-6">
-    <div class="card bg-base-100 shadow-lg h-full">
-      <div class="card-body p-6 md:p-8 relative">
-        <div class="flex flex-col items-center">
-          <div class="bg-primary/10 p-3 rounded-full mb-3">
-            <UserIcon class="h-8 w-8 text-primary" />
+  <div class="w-full mx-auto px-4 py-6 animate-fade-in">
+    <div class="glass-card rounded-3xl h-full p-1">
+      <div class="card-body p-6 md:p-10 relative">
+        <div class="flex flex-col items-center mb-8">
+          <div class="bg-primary/10 p-4 rounded-full mb-4 animate-float">
+            <UserIcon class="h-10 w-10 text-primary" />
           </div>
-          <h2 class="text-2xl md:text-3xl font-bold text-center text-primary">
-            <span class="bg-clip-text from-primary to-accent">{{
+          <h2 class="text-3xl md:text-4xl font-bold text-center">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">{{
               $t('sections.summary.title')
             }}</span>
           </h2>
         </div>
 
         <!-- Contenido mejorado -->
-        <div class="space-y-2 text-base md:text-lg leading-relaxed">
-          <div class="p-6 rounded-xl">
+        <div class="space-y-6 text-base md:text-lg leading-relaxed text-base-content/80">
+          <div
+            class="p-6 rounded-2xl bg-base-200/50 border border-base-content/5 hover:bg-base-200/80 transition-colors duration-300"
+          >
             <p class="text-justify">
-              <span class="font-bold text-primary">{{ $t('porfileCard.role') }}</span>
+              <span class="font-bold text-primary text-xl block mb-2">{{
+                $t('porfileCard.role')
+              }}</span>
               {{ $t('sections.summary.p1') }}
             </p>
 
@@ -27,49 +31,64 @@
           </div>
         </div>
 
-        <div class="flex flex-col items-center">
-          <div class="bg-primary/10 p-3 rounded-full mb-3">
-            <SkillsIcon class="h-8 w-8 text-primary" />
+        <div class="divider my-10 opacity-30"></div>
+
+        <div class="flex flex-col items-center mb-8">
+          <div
+            class="bg-primary/10 p-4 rounded-full mb-4 animate-float"
+            style="animation-delay: 1s"
+          >
+            <SkillsIcon class="h-10 w-10 text-primary" />
           </div>
-          <h2 class="text-2xl md:text-3xl font-bold text-center text-primary">
-            <span class="bg-clip-text from-primary to-accent">{{
+          <h2 class="text-3xl md:text-4xl font-bold text-center">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">{{
               $t('sections.skills.title')
             }}</span>
           </h2>
         </div>
 
-        <div class="space-y-8">
+        <div class="space-y-10">
           <!-- Sección Frontend -->
-          <div>
-            <h3 class="text-2xl font-bold text-primary border-primary pb-2 mb-4">Frontend</h3>
-            <div class="flex flex-wrap gap-3">
-              <VuejsBadge />
-              <TypescriptBadge />
-              <JavascriptBadge />
-              <HtmlBadge />
-              <CssBadge />
-              <JqueryBadge />
+          <div class="group">
+            <h3
+              class="text-2xl font-bold text-primary border-b border-primary/20 pb-2 mb-6 inline-block"
+            >
+              Frontend
+            </h3>
+            <div class="flex flex-wrap gap-4">
+              <div class="hover-lift"><VuejsBadge /></div>
+              <div class="hover-lift"><TypescriptBadge /></div>
+              <div class="hover-lift"><JavascriptBadge /></div>
+              <div class="hover-lift"><HtmlBadge /></div>
+              <div class="hover-lift"><CssBadge /></div>
+              <div class="hover-lift"><JqueryBadge /></div>
             </div>
           </div>
 
           <!-- Sección Backend -->
-          <div>
-            <h3 class="text-2xl font-bold text-primary border-secondary pb-2 mb-4">Backend</h3>
-            <div class="flex flex-wrap gap-3">
-              <PhpBadge />
-              <LaravelBadge />
-              <CodeigniterBadge />
-              <PythonBadge />
+          <div class="group">
+            <h3
+              class="text-2xl font-bold text-secondary border-b border-secondary/20 pb-2 mb-6 inline-block"
+            >
+              Backend
+            </h3>
+            <div class="flex flex-wrap gap-4">
+              <div class="hover-lift"><PhpBadge /></div>
+              <div class="hover-lift"><LaravelBadge /></div>
+              <div class="hover-lift"><CodeigniterBadge /></div>
+              <div class="hover-lift"><PythonBadge /></div>
             </div>
           </div>
 
           <!-- Sección Frameworks/Mobile -->
-          <div>
-            <h3 class="text-2xl font-bold text-primary border-accent pb-2 mb-4">
+          <div class="group">
+            <h3
+              class="text-2xl font-bold text-accent border-b border-accent/20 pb-2 mb-6 inline-block"
+            >
               Mobile & Frameworks
             </h3>
-            <div class="flex flex-wrap gap-3">
-              <FlutterBadge />
+            <div class="flex flex-wrap gap-4">
+              <div class="hover-lift"><FlutterBadge /></div>
               <!-- Agrega otros badges de frameworks aquí -->
             </div>
           </div>

@@ -6,38 +6,41 @@ import { profileData } from '@/core/data/profileData';
 </script>
 
 <template>
-  <div class="card bg-base-200 shadow-lg h-full">
-    <div class="flex flex-col h-full p-4 sm:p-6">
+  <div class="glass-effect rounded-3xl h-full border border-white/10">
+    <div class="flex flex-col h-full p-6 sm:p-8">
       <!-- Avatar -->
-      <div class="flex flex-col items-center justify-center pt-2 sm:pt-6">
-        <div class="avatar rounded-2xl p-1 sm:p-2 shadow-md">
-          <div class="w-24 sm:w-40 rounded-xl overflow-hidden">
-            <img
-              :src="profileData.avatar"
-              class="hover:scale-105 transition-transform duration-300"
-              alt="Profile photo"
-            />
+      <div class="flex flex-col items-center justify-center pt-4 sm:pt-8 animate-fade-in">
+        <div class="avatar relative group">
+          <div
+            class="w-32 sm:w-48 rounded-2xl overflow-hidden ring-4 ring-primary/20 shadow-2xl transition-all duration-500 group-hover:ring-primary/50 group-hover:scale-105"
+          >
+            <img :src="profileData.avatar" class="object-cover w-full h-full" alt="Profile photo" />
           </div>
+          <div
+            class="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          ></div>
         </div>
         <!-- Nombre -->
-        <div class="flex-1 flex flex-col items-center justify-center pt-4 sm:pt-6 px-2">
+        <div class="flex-1 flex flex-col items-center justify-center pt-6 px-2">
           <div class="text-center">
-            <h2 class="2xl:text-2xl xl:text-[20px] font-bold truncate">
+            <h2
+              class="text-2xl xl:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary truncate"
+            >
               {{ profileData.name }}
             </h2>
           </div>
-          <div class="pt-1 sm:pt-2">
-            <span class="badge badge-outline text-xs sm:text-sm">{{
-              $t(profileData.roleKey)
-            }}</span>
+          <div class="pt-3">
+            <span class="badge badge-primary badge-outline gap-2 p-3 text-sm font-medium">
+              {{ $t(profileData.roleKey) }}
+            </span>
           </div>
         </div>
       </div>
 
       <!-- Divider -->
-      <div class="divider w-2/3 mx-auto my-2 sm:my-4"></div>
+      <div class="divider w-3/4 mx-auto my-6 opacity-50"></div>
 
-      <ul class="list rounded-box flex flex-col gap-2 mx-auto">
+      <ul class="list flex flex-col gap-4 mx-auto w-full max-w-xs animate-slide-up">
         <ContactInfo
           v-for="(contact, index) in profileData.contact"
           :key="index"
@@ -45,14 +48,19 @@ import { profileData } from '@/core/data/profileData';
         />
       </ul>
 
-      <div class="divider w-2/3 mx-auto my-2 sm:my-4"></div>
+      <div class="divider w-3/4 mx-auto my-6 opacity-50"></div>
 
       <!-- Socials -->
-      <ul class="list rounded-box flex flex-col gap-2 mx-auto">
+      <ul
+        class="list flex flex-col gap-3 mx-auto w-full max-w-xs animate-slide-up"
+        style="animation-delay: 100ms"
+      >
         <SocialLinks v-for="(social, index) in profileData.socials" :key="index" :social="social" />
       </ul>
 
-      <LangComponent />
+      <div class="mt-auto pt-6 flex justify-center animate-fade-in" style="animation-delay: 200ms">
+        <LangComponent />
+      </div>
     </div>
   </div>
 </template>
