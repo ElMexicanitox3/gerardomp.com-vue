@@ -2,11 +2,12 @@
 import NavbarComponent from '@/features/home/components/NavbarComponent.vue';
 import ProjectsView from '@/features/home/views/projectsView.vue';
 import SummaryView from '@/features/home/views/summaryView.vue';
+import ExperienceView from '@/features/home/views/ExperienceView.vue';
 import ProfileCard from '@/features/home/components/ProfileCard.vue';
 
 import { onBeforeUnmount, onMounted, ref } from 'vue';
 
-const sections: string[] = ['summary', 'projects'];
+const sections: string[] = ['summary', 'experience', 'projects'];
 
 const currentTitle = ref(sections[0]);
 const navbarHeight = 64; // Ajusta según la altura real de tu navbar
@@ -78,6 +79,7 @@ onBeforeUnmount(() => {
             <div class="flex-1 overflow-hidden">
               <!-- <router-view /> -->
               <SummaryView id="summary" />
+              <ExperienceView id="experience" />
               <ProjectsView id="projects" />
             </div>
           </div>
